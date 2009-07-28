@@ -1,0 +1,374 @@
+--- 
+name: Last export
+records: 
+  Snippets: 
+    "1": 
+      name: search
+      updated_at: 2008-09-08 18:23:33 Z
+      filter_id: ""
+      created_by: 
+      lock_version: 0
+      updated_by: 
+      id: 1
+      content: |-
+        <div id="search" class="search">
+        
+        </div>
+      created_at: 2008-09-08 18:23:33 Z
+    "2": 
+      name: about
+      updated_at: 2008-09-08 20:21:50 Z
+      filter_id: ""
+      created_by: 
+      lock_version: 1
+      updated_by: 
+      id: 2
+      content: |-
+        <div class="sidebar-node">
+          <h3>About</h3>
+          <p>
+            A port of the Scribbish theme by Charlie Robbins at <a href="http://www.levelg.com">Level G</a>.
+          </p>
+        </div>
+      created_at: 2008-09-08 18:47:52 Z
+    "3": 
+      name: archives
+      updated_at: 2008-09-08 19:09:00 Z
+      filter_id: ""
+      created_by: 
+      lock_version: 2
+      updated_by: 
+      id: 3
+      content: |-
+        <div class="sidebar-node">
+        	<h3>Archives</h3>
+        	<ul>
+        	<r:find url="/articles">
+        		<r:children:each order="desc">
+        			<r:header><li><a href="<r:date format="/articles/%Y/%m/" />"><r:date format="%B %Y"/></a></li></r:header>
+        		</r:children:each>
+        	</r:find>
+        	</ul>
+        </div>
+      created_at: 2008-09-08 19:01:00 Z
+    "4": 
+      name: article
+      updated_at: 2008-09-08 20:44:10 Z
+      filter_id: ""
+      created_by: 
+      lock_version: 3
+      updated_by: 
+      id: 4
+      content: |-
+        <div class="hentry" id="article-<r:slug />">
+          <h2 class="entry-title">
+            <r:link><r:title /></r:link>
+            <span class="comment_count">&nbsp;</span>
+          </h2>
+          <abbr class="published" title="<r:rfc1123_date />">
+            <span class="date"><r:date format="%A, %B %d %Y"/></span>
+          </abbr>
+          <br class="clear" />
+          <div class="entry-content">
+            <r:content part="content" />
+          </div>
+          <br/>
+          <ul class="meta">
+            <li>Posted by <span class="fn">Charlie Robbins</span></li>
+          </ul>
+        </div>
+      created_at: 2008-09-08 19:39:45 Z
+    "5": 
+      name: article-extended
+      updated_at: 2008-09-08 20:37:14 Z
+      filter_id: ""
+      created_by: 
+      lock_version: 1
+      updated_by: 
+      id: 5
+      content: |-
+        <div class="hentry" id="article-<r:slug />">
+          <h2 class="entry-title">
+            <r:link><r:title /></r:link>
+            <span class="comment_count">&nbsp;</span>
+          </h2>
+          <abbr class="published" title="<r:rfc1123_date />">
+            <span class="date"><r:date format="%A, %B %d %Y"/></span>
+          </abbr>
+          <br class="clear" />
+          <div class="entry-content">
+            <r:content part="content" />
+          </div>
+          <r:if_content part="extended">
+            <div class="extended">
+              <r:content part="extended" />
+            </div>
+          </r:if_content>
+          <br/>
+          <ul class="meta">
+            <li>Posted by <span class="fn">Charlie Robbins</span></li>
+          </ul>
+        </div>
+      created_at: 2008-09-08 19:43:35 Z
+  Radiant::ExtensionMetas: 
+    "1": 
+      name: Settings
+      schema_version: 1
+      id: 1
+      enabled: true
+  Pages: 
+    "1": 
+      virtual: false
+      slug: /
+      class_name: Page
+      updated_at: 2008-09-08 19:26:03 Z
+      title: Home
+      created_by: 
+      breadcrumb: Home
+      lock_version: 3
+      updated_by: 
+      id: 1
+      description: ""
+      status_id: 100
+      published_at: 2008-09-08 17:28:14 Z
+      parent_id: 
+      layout_id: 1
+      keywords: ""
+      created_at: 2008-09-08 17:28:14 Z
+    "2": 
+      virtual: false
+      slug: articles
+      class_name: ArchivePage
+      updated_at: 2008-09-08 19:40:35 Z
+      title: Articles
+      created_by: 
+      breadcrumb: Articles
+      lock_version: 20
+      updated_by: 
+      id: 2
+      description: ""
+      status_id: 100
+      published_at: 2008-09-08 18:53:13 Z
+      parent_id: 1
+      layout_id: 1
+      keywords: ""
+      created_at: 2008-09-08 18:53:13 Z
+    "3": 
+      virtual: true
+      slug: monthly-archives
+      class_name: ArchiveMonthIndexPage
+      updated_at: 2008-09-08 19:06:44 Z
+      title: "%B %Y Archives"
+      created_by: 
+      breadcrumb: Monthly Archives
+      lock_version: 0
+      updated_by: 
+      id: 3
+      description: ""
+      status_id: 100
+      published_at: 2008-09-08 19:06:44 Z
+      parent_id: 2
+      layout_id: 
+      keywords: ""
+      created_at: 2008-09-08 19:06:44 Z
+    "4": 
+      virtual: false
+      slug: welcome-to-radiant-on-scribbish
+      class_name: Page
+      updated_at: 2008-09-08 20:41:14 Z
+      title: Welcome to Radiant on Scribbish
+      created_by: 
+      breadcrumb: Welcome to Radiant on Scribbish
+      lock_version: 5
+      updated_by: 
+      id: 4
+      description: ""
+      status_id: 100
+      published_at: 2008-09-08 19:07:35 Z
+      parent_id: 2
+      layout_id: 
+      keywords: ""
+      created_at: 2008-09-08 19:07:35 Z
+  Radiant::Configs: 
+    "6": 
+      id: 6
+      value: "1209600"
+      description: 
+      key: session_timeout
+    "1": 
+      id: 1
+      value: Radiant on Scribbish
+      description: Title text displayed at the top of all administration screens.
+      key: admin.title
+    "2": 
+      id: 2
+      value: A port of the Scribbish Theme
+      description: The tagline displayed underneath the main administration title
+      key: admin.subtitle
+    "3": 
+      id: 3
+      value: body, extended
+      description: |
+        Defines the page parts that a new page is created with.  It should be a list, separated by a comma and a space.  For example:
+        
+        bq. @body, extended, sidebar@
+
+      key: defaults.page.parts
+    "4": 
+      id: 4
+      value: draft
+      description: |
+        Defines the publishing status of new pages.  This can any one of:
+        
+        * draft
+        * published
+        * reviewed
+        * hidden
+
+      key: defaults.page.status
+    "5": 
+      id: 5
+      value: ""
+      description: |
+        Sets the text filter a new page has by default.  Valid options, in a vanilla Radiant install are:
+        
+        * _leave blank to set no default filter_
+        * Markdown
+        * SmartyPants
+        * Textile
+
+      key: defaults.page.filter
+  Layouts: 
+    "1": 
+      name: Normal
+      content_type: ""
+      updated_at: 2008-09-08 20:20:31 Z
+      created_by: 
+      lock_version: 14
+      updated_by: 
+      id: 1
+      content: |
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+          <title><r:config:setting key="admin.title"/> : <r:title /></title>
+          <script src="/javascripts/prototype.js" type="text/javascript"></script>
+          <script src="/javascripts/site/code_highlighter.js" type="text/javascript"></script>
+          <script src="/javascripts/site/ruby.js" type="text/javascript"></script>
+          <link href="/stylesheets/scribbish/application.css" media="all" rel="stylesheet" type="text/css" />
+        </head>
+        
+        <body>
+        <div id="container">
+          <div id="header">
+            <h1><span><a href="/"><r:config:setting key="admin.title"/></a></span></h1>
+            <h2><r:config:setting key="admin.subtitle" /></h2>
+          </div>
+        
+          <div id="page">
+            <div id="content">
+            	<r:content />	
+            </div>
+        
+            <div id="sidebar">
+              <!-- search -->
+              <r:snippet name="search" />
+              <r:snippet name="about" />
+              <r:snippet name="archives" />
+        
+              <!-- sidebar components -->
+            </div>
+            <br style="clear:both;" />
+          </div>
+        
+          <div id="footer">
+            <hr />
+            <p><a href="/"><r:config:setting key="admin.title"/></a></p>
+            <ul>
+              <li>powered by <a href="http://www.radiantcms.org">RadiantCMS</a> /
+                  styled with <a href="http://quotedprintable.com/pages/scribbish">Scribbish</a> <br/>
+                  / ported by <a href="http://www.levelg.com">Level G</a></li>
+            </ul>
+          </div>
+        </div>
+        </body>
+        </html>
+
+      created_at: 2008-09-08 17:41:55 Z
+  PageParts: 
+    "6": 
+      name: extended
+      filter_id: ""
+      page_id: 3
+      id: 6
+      content: ""
+    "7": 
+      name: body
+      filter_id: ""
+      page_id: 4
+      id: 7
+      content: <r:snippet name="article-extended" />
+    "8": 
+      name: extended
+      filter_id: ""
+      page_id: 4
+      id: 8
+      content: There is also an option to include some extended content by adding content under a page part called "extended."
+    "9": 
+      name: content
+      filter_id: ""
+      page_id: 4
+      id: 9
+      content: |
+        Thanks for taking the time to check this out. You can download the full source here. You need the import/export extension to import this file into your Radiant installation.
+        
+        Sample Ruby Snippet:
+        
+        <pre>
+        <code class="ruby">
+        namespace :db do
+          desc "Load seed fixtures (from db/fixtures) into the current environment's database." 
+          task :seed =&gt; :environment do
+            require 'active_record/fixtures'
+            Dir.glob(RAILS_ROOT + '/db/fixtures/*.yml').each do |file|
+              Fixtures.create_fixtures('db/fixtures', File.basename(file, '.*'))
+            end
+          end
+        end
+        </code>
+        </pre>
+
+    "1": 
+      name: body
+      filter_id: ""
+      page_id: 1
+      id: 1
+      content: |-
+        <r:find url="/articles/">
+          <r:content />
+        </r:find>
+    "2": 
+      name: extended
+      filter_id: ""
+      page_id: 1
+      id: 2
+      content: ""
+    "3": 
+      name: body
+      filter_id: ""
+      page_id: 2
+      id: 3
+      content: |-
+        <r:children:each by="published_at" order="desc" limit="10">
+          <r:snippet name="article" />
+        </r:children:each>
+    "5": 
+      name: body
+      filter_id: ""
+      page_id: 3
+      id: 5
+      content: |-
+        <r:archive:children:each order="desc">
+        
+        </r:archive:children:each>
+description: Backup of the database as of Mon, 08 Sep 2008 21:02:09 +0000
